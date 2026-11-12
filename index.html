@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina personal de Luis: Docente de desarrollo web. Conoce mis intereses, mis avances en HTML, CSS, y JavaScript, y contáctenme.">
+    <title>Luis - Mi Página Personal | Desarrollo web</title>
+
+    <!-- Cambio de Hoy: conectar el html con el css-->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <a href="#contenido" class="saltar">Saltar al contenido principal</a>
+
+    <header>
+      <h1>Mi Página Personal</h1>
+
+      <nav aria-label="Menú principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#intereses">Intereses</a>
+        <a href="#avances">Mis avances</a>
+        <a href="#contacto">Contáctame</a>
+        <a href="practica-js.html">Laboratorio JS</a>
+        <a href="lista/lista.html">Lista de Tareas</a>
+      </nav>
+
+      <button type="button" id="btn-tema" class="btn-tema" aria-pressed="false">🌙 Modo oscuro</button>
+
+    </header>
+
+    <main id="contenido">
+      <h2 id="sobre-mi">Sobre mí</h2>
+      <p id="saludo" class="saludo"></p>
+
+      <div class="sobre-mi-grid">
+        <p>Soy <strong class="destacado">Luis</strong> y estoy aprendiendo <em>desarrollo web</em>.</p>
+        <img src="img/foto.jpg" alt="Luis sonriendo mientras sostiene un trofeo dorado de segundo lugar" width="200" height="355">
+
+        <h2 id="intereses">Mis intereses <span id="contador-favoritos" class="contador"></span></h2>
+
+        <ul>
+          <li>Programación</li>
+          <li>Diseño</li>
+          <li>Educación</li>
+          <li>Musica</li>
+        </ul>
+
+        <h2 id="avances">Mis avances</h2>
+        <table>
+          <caption class="solo-lectores">Mis avances por lenguaje</caption>
+          <thead>
+            <tr>
+              <th>Lenguaje</th>
+              <th>Nivel</th>
+              <th>Meses de práctica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>Básico</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>Principiante</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>Sin empezar</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="contacto">Contáctame</h2>
+
+      
+      <form novalidate>
+        <p>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" autocomplete="name">
+        </p>
+        <p>
+          <label for="correo">Correo:</label><br>
+          
+          <input type="email" id="correo" name="correo" autocomplete="email">
+        </p>
+        <p>
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje"></textarea><br>
+          
+          <small id="contador-mensaje" class="contador-mensaje">0 caracteres</small>
+        </p>
+        <p>
+          <label for="nivel">Nivel de interés:</label><br>
+          <select id="nivel" name="nivel">
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+          </select>
+        </p>
+        
+        <p>
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpiar</button>
+        </p>
+      </form>
+
+       
+      <p id="mensaje-error" class="mensaje-form" aria-live="polite"></p>
+
+    </main>
+
+    <footer>
+      <p>Contáctame en <a href="mailto:luisitoeduardoher@gmail.com">luisitoeduardoher@gmail.com</a></p>
+
+      <p class="badge-js">⚡JavaScript conectado - abre la consola </p>
+
+      <div class="en-linea"></div>
+      <p class="en-linea-estado"><span class="punto-vivo" aria-hidden="true"></span> Sitio publicado en internet</p>
+      <p class="en-linea-texto">Visita esta pagina desde cualquier dispositivo</p>
+      <p class="en-linea-enlaces">
+       <a href="http://astrid-pagina-personal.netlify.app" target="_blank" rel="noopener"> astrid-pagina-personal.netlify.app</a>
+       <a href="http://astrid-pagina-personal.netlify.app/lista/lista.html" target="_blank" rel="noopener"> Mi lista de tareas en línea</a>
+      </p>
+
+      <p>
+        <a class="enlace-github" href="https://github.com/cuxulicastrid-byte/pagina-personal.git" target="_blank" rel="noopener">
+          <span class="icono-git" aria-hidden="true">⎇</span> Ver el código de esta página en GitHub
+        </a>
+      </p>
+ 
+    </footer>
+ 
+    <script src="js/script.js"></script>
+ 
+  </body>
+</html>
